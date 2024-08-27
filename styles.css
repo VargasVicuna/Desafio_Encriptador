@@ -1,0 +1,180 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F3F5FC; /* Color de fondo */
+}
+
+*{
+    margin: 0;
+    padding: 0;   
+}
+
+header {
+    position: relative;
+    height: 100px; /* Ajustado para acomodar el logo */
+}
+
+.logo {
+    position: absolute;
+    top: 40px; /* Posición en Y */
+    left: 40px; /* Posición en X */
+    width: 120px; /* Ancho */
+    height: 48px; /* Altura */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* Alinea las secciones al principio */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 250px; /* Añadido espacio entre las secciones */
+}
+
+.input-section,
+.output-rectangle {
+    position:relative;
+    width: 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 300px;
+    padding: 10px;
+    background-color: transparent; /* Fondo transparente */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 32px;
+    color: #0A3871;
+    border: none;
+    resize: none;
+}
+
+textarea#textoSalida {
+    height: 120px;
+    margin-top: 20px; /* Espacio entre la imagen y el textarea */
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    justify-content: center; /* Centra los botones dentro del contenedor */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.muneco {
+    width: 336px; /* Ancho de la imagen */
+    height: 304px; /* Altura de la imagen */
+    margin-bottom: 20px;
+}
+
+/* Estilos para el rectángulo */
+.output-rectangle {
+    position: relative;
+    top: 0; /* Posición relativa para mejor responsividad */
+    left: 0;
+    width: 387px; /* Ancho */
+    height: 944px; /* Altura */
+    background-color: #FFFFFF; /* Color de fondo */
+    border-radius: 32px; /* Esquinas redondeadas */
+    opacity: 1; /* Opacidad al 100% */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: cenert;
+    justify-content: space-between;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    clip-path: inset(0 0 0 0); /* Clip content */
+}
+
+textarea#textoSalida {
+    width: 336px; /* Ancho */
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #495057;
+    background-color: transparent; /* Fondo transparente */
+    text-align: center; /* Centra el texto horizontalmente */
+    border: none;
+    resize: none;
+}
+
+textarea#textoSalida::placeholder {
+    color: #495057;
+    opacity: 1;
+}
+
+textarea#textoSalida:focus {
+    outline: none;
+}
+
+button {
+    width: 336px; /* Ancho */
+    height: 67px; /* Altura */
+    background-color: #B3DAF9; /* Color Light Blue */
+    color: #0A3871;
+    border-radius: 24px;
+    border: 2px solid #0A3871;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #99CCE7;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia el layout a columnas en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .input-section,
+    .output-rectangle {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+
+    .output-rectangle {
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 20px; /* Reduce el padding */
+    }
+
+    .muneco {
+        width: 100%; /* Ancho completo de la imagen */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    button {
+        width: 100%; /* Ancho completo de los botones */
+    }
+
+    textarea,
+    textarea#textoSalida {
+        font-size: 18px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+}
